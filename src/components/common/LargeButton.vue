@@ -1,13 +1,31 @@
 <script setup>
   defineProps({
-    title: String,
+    title: {
+      type: String,
+      required: true,
+    },
+    CustomClass: String,
+    paddingX: {
+      default: "px-8",
+      type: String,
+    },
+    href: {
+      default: "#",
+      type: String,
+    },
   });
 </script>
 
 <template>
-  <button
-    class="text-sm md:text-md border border-gray-400 rounded-md py-1 px-4 capitalize cursor-pointer"
+  <a
+    :href="href"
+    :class="[
+      'transition-all duration-300 text-sm md:text-md outline-[1.5px] outline-[var(--primary-color)] rounded py-2 capitalize cursor-pointer w-fit',
+      CustomClass,
+    ]"
   >
     {{ title }}
-  </button>
+  </a>
 </template>
+
+<style></style>
