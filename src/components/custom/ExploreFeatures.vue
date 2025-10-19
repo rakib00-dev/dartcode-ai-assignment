@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <section class="py-20">
     <div class="baseContainer grid gap-16">

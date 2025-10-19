@@ -5,6 +5,7 @@
   import Hero from "./components/custom/Hero.vue";
   import Navbar from "./components/custom/Navbar.vue";
   import Footer from "./components/custom/Footer.vue";
+  import WhatMakesDifferent from "./components/custom/WhatMakesDifferent.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@
   <Hero />
   <ExploreFeatures />
   <FeatureBenefits />
+  <WhatMakesDifferent />
   <ReadyToShip />
   <Footer />
 </template>
