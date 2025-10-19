@@ -5,6 +5,8 @@
   --primary-color: #42389e;
   --primary-dark-color: #2e276f;
   --primary-light-color: #e6e7f4;
+  --gray-color: #4b4b4b;
+  --light-gray-color: #8a8a8a;
 }
 
 html {
@@ -18,9 +20,18 @@ body {
 }
 
 .baseContainer {
-  @apply max-w-7xl mx-auto w-full px-8 md:px-20 py-3;
+  @apply max-w-7xl mx-auto w-full px-8 md:px-16 lg:px-20 py-3;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "DM Sans", sans-serif;
+}
+
+.mainSectionHeader {
+  @apply text-center text-2xl lg:text-[2.625rem] font-semibold text-[var(--primary-color)] leading-[120%];
 }
