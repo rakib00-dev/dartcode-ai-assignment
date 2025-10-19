@@ -22,6 +22,7 @@
     :class="[
       'transition-all duration-300 text-sm md:text-md outline-[1.5px] outline-[var(--primary-color)] rounded py-2 capitalize cursor-pointer w-fit',
       CustomClass,
+      paddingX,
     ]"
   >
     {{ title }}
