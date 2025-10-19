@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 
 :root {
   --primary-color: #42389e;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.baseContainer {
+  @apply max-w-7xl mx-auto w-full px-10 py-3;
 }
