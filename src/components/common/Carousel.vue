@@ -1,28 +1,53 @@
 <script setup>
-  import { Swiper, SwiperSlide } from "swiper/vue";
-
-  import "swiper/css";
-  import "swiper/css/pagination";
-
-  import { Pagination } from "swiper/modules";
+  import "vue3-carousel/carousel.css";
+  import { Carousel, Slide, Pagination } from "vue3-carousel";
   import PlanCard from "./PlanCard.vue";
 
-  const modules = [Pagination];
+  // Carousel configuration
+  const config = {
+    // height: 200,
+    itemsToShow: 3,
+    gap: 10,
+    snapAlign: "start",
+
+    // 'breakpointMode' determines how the carousel breakpoints are calculated
+    // Acceptable values: 'viewport' (default) | 'carousel'
+    // 'viewport' - breakpoints are based on the viewport width
+    // 'carousel' - breakpoints are based on the carousel width
+    breakpointMode: "carousel",
+
+    // Breakpoints are mobile-first
+    // Any settings not specified will fall back to the carousel's default settings
+    breakpoints: {
+      // 300px and up
+      300: {
+        itemsToShow: 1,
+        snapAlign: "center",
+      },
+      // 400px and up
+      400: {
+        itemsToShow: 1,
+        snapAlign: "start",
+      },
+      // 500px and up
+      500: {
+        itemsToShow: 2,
+        snapAlign: "start",
+      },
+    },
+  };
 </script>
 
 <template>
-  <div class="w-full py-10">
-    <swiper
-      :slides-per-view="'auto'"
-      :space-between="30"
-      :pagination="{ clickable: true }"
-      :modules="modules"
-      class="mySwiper"
-    >
-      <swiper-slide v-for="n in 3" :key="n" class="" style="width: 80%">
-        <PlanCard />
-      </swiper-slide>
-      <swiper-slide v-for="n in 3" :key="n" class="" style="width: 80%">
+  <!-- Resizable container for testing 'carousel' breakpointMode -->
+  <!-- Drag the right edge to adjust the width and see the breakpoints change -->
+  <div class="carousel__wrapper">
+    <Carousel v-bind="config" class="gap-5 h-auto w-full" style="height: 100%">
+      <Slide>
+        <PlanCard style="border-radius: 8px; object-fit: cover" />
+      </Slide>
+
+      <Slide>
         <PlanCard
           is-popular
           small-title="Enhance Plan"
@@ -32,8 +57,9 @@
             'AI QA Testing',
           ]"
         />
-      </swiper-slide>
-      <swiper-slide v-for="n in 3" :key="n" class="" style="width: 80%">
+      </Slide>
+
+      <Slide>
         <PlanCard
           small-title="Enterprise Plan"
           :card-list-texts="[
@@ -43,24 +69,27 @@
             'AI Release Management',
           ]"
         />
-      </swiper-slide>
-    </swiper>
+      </Slide>
+
+      <template #addons>
+        <Pagination />
+      </template>
+    </Carousel>
   </div>
 </template>
 
-<style>
-  .mySwiper {
-    width: fit-content;
-    height: 100%;
-    padding-bottom: 3rem;
+<style scoped>
+  :root {
+    background-color: #242424;
   }
 
-  .swiper-pagination-bullet {
-    background-color: #999;
-    opacity: 0.6;
+  .carousel {
+    --vc-nav-background: rgba(255, 255, 255, 0.7);
+    --vc-nav-border-radius: 100%;
   }
-  .swiper-pagination-bullet-active {
-    background-color: #2563eb;
-    opacity: 1;
+
+  .carousel__wrapper {
+    resize: horizontal;
+    padding: 2px;
   }
 </style>

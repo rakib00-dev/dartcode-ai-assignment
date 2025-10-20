@@ -14,13 +14,18 @@
       default: ["AI Documentation Module", "AI CLI for Dart"],
       type: Array,
     },
+    cardClass: {
+      type: String,
+      default: "w-full",
+    },
   });
 </script>
 
 <template>
   <div
     :class="[
-      'flex flex-col gap-10 border rounded-2xl border-[var(--border-color)] shadow-2xl p-8 w-full h-[773.01px]',
+      'flex flex-col gap-10 border rounded-2xl border-[var(--border-color)] shadow-2xl p-8 h-[773.01px]',
+      cardClass,
       { bgColor: isPopular, allTextWhite: isPopular },
     ]"
     :key="cardListTexts[cardListTexts.length - 1]"

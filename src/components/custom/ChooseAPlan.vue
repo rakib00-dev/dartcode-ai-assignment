@@ -30,7 +30,7 @@
         />
       </div>
       <div
-        class="lg:hidden flex justify-center items-center gap-8 overflow-hidden"
+        class="lg:hidden flex justify-center items-center gap-8 h-auto overflow-hidden"
       >
         <Carousel />
       </div>
