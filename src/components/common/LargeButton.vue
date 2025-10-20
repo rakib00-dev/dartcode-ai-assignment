@@ -4,10 +4,10 @@
       type: String,
       required: true,
     },
-    CustomClass: String,
+    CustomClass: { type: [String, Array, Object] },
     paddingX: {
-      default: "px-8",
       type: String,
+      default: "px-8",
     },
     href: {
       default: "#",

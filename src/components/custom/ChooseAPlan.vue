@@ -1,102 +1,38 @@
+<script setup lang="ts">
+  import Carousel from "../common/Carousel.vue";
+  import PlanCard from "../common/PlanCard.vue";
+</script>
+
 <template>
   <section class="py-24">
     <div class="baseContainer grid gap-[50px]">
       <h1 class="mainSectionHeader">Choose A Plan That Works For You</h1>
 
-      <div class="md:flex justify-center items-center gap-14">
-        <div class="flex flex-col gap-4">
-          <h4 class="font-bold text-2xl">Feature</h4>
-          <div class="text-sm">
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>AI-Powered
-              QA & Release Automation</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Multi-Repo
-              Sync & Dependency Management</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>CLI +
-              Dashboard Flexibility</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Coverage +
-              Test-First Release Logic</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Docs,
-              Changelogs, Tags Auto-Generated</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>OAuth +
-              Git Integration</span
-            >
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <h4 class="font-bold text-2xl">Benefits</h4>
-          <div class="text-sm">
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Save dev
-              hours, eliminate manual work</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Avoid
-              version mismatches and update chaos</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Use it
-              your way — terminal or web UI</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Stop
-              broken code before it ships</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Never miss
-              a release note or a Git tag again</span
-            >
-
-            <span
-              class="flex items-center gap-1 text-sm lg:text-lg text-[#262E35] font-[300]"
-            >
-              <span class="text-xl text-[#262E35] font-[300]">•</span>Plug in
-              GitHub, GitLab, or Bitbucket in seconds</span
-            >
-          </div>
-        </div>
+      <div class="hidden lg:flex justify-center items-center gap-8">
+        <PlanCard />
+        <PlanCard
+          is-popular
+          small-title="Enhance Plan"
+          :card-list-texts="[
+            'AI Documentation Module',
+            'AI CLI for Dart',
+            'AI QA Testing',
+          ]"
+        />
+        <PlanCard
+          small-title="Enterprise Plan"
+          :card-list-texts="[
+            'AI Documentation Module',
+            'AI CLI for Dart',
+            'AI QA Testing',
+            'AI Release Management',
+          ]"
+        />
+      </div>
+      <div
+        class="lg:hidden flex justify-center items-center gap-8 overflow-hidden"
+      >
+        <Carousel />
       </div>
     </div>
   </section>

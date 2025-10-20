@@ -6,6 +6,7 @@
   import Navbar from "./components/custom/Navbar.vue";
   import Footer from "./components/custom/Footer.vue";
   import WhatMakesDifferent from "./components/custom/WhatMakesDifferent.vue";
+  import ChooseAPlan from "./components/custom/ChooseAPlan.vue";
 </script>
 
 <template>
@@ -13,9 +14,8 @@
   <Hero />
   <ExploreFeatures />
   <FeatureBenefits />
+  <ChooseAPlan />
   <WhatMakesDifferent />
   <ReadyToShip />
   <Footer />
 </template>
-
-<style scoped></style>
