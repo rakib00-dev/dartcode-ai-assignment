@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <main class="bg-white/90 sticky top-0 z-50">
+  <main class="bg-white/90 sticky top-0 z-50 py-3">
     <div class="baseContainer flex justify-between items-center gap-4">
       <div className="absolute inset-0 bg-white/40 backdrop-blur-sm -z-10" />
 
@@ -50,7 +50,7 @@
         </svg>
       </RouterLink>
 
-      <!-- navigation list for pages TODO:Add routing -->
+      <!-- navigation list for pages TODO✅:Add routing -->
       <div
         class="hidden lg:flex justify-center items-center text-[1rem] lg:text-lg"
       >
