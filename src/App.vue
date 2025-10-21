@@ -7,15 +7,11 @@
   import Footer from "./components/custom/Footer.vue";
   import WhatMakesDifferent from "./components/custom/WhatMakesDifferent.vue";
   import ChooseAPlan from "./components/custom/ChooseAPlan.vue";
+  import { RouterView } from "vue-router";
 </script>
 
 <template>
   <Navbar />
-  <Hero />
-  <ExploreFeatures />
-  <FeatureBenefits />
-  <ChooseAPlan />
-  <WhatMakesDifferent />
-  <ReadyToShip />
+  <RouterView />
   <Footer />
 </template>

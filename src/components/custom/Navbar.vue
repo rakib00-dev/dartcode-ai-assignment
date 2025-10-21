@@ -1,9 +1,12 @@
 <script setup>
-  import { ref } from "vue";
-  import { Menu, X } from "lucide-vue-next";
+  import { ref, watch } from "vue";
+  import { X } from "lucide-vue-next";
   import NavButtonsGroup from "../common/NavButtonsGroup.vue";
+  import { RouterLink, useRoute } from "vue-router";
 
   const isNavMenuOpen = ref(false);
+
+  const route = useRoute();
 
   console.log(isNavMenuOpen.value);
 </script>
@@ -14,7 +17,7 @@
       <div className="absolute inset-0 bg-white/40 backdrop-blur-sm -z-10" />
 
       <!-- logo -->
-      <div>
+      <RouterLink to="/">
         <svg
           width="176"
           height="51"
@@ -45,32 +48,93 @@
             fill="#42389E"
           />
         </svg>
-      </div>
+      </RouterLink>
 
       <!-- navigation list for pages TODO:Add routing -->
       <div class="hidden lg:flex justify-center items-center text-[1rem]">
-        <a
-          href="/"
-          class="transition-all duration-300 p-4 font-bold text-[var(--primary-color)]"
-          >Home</a
+        <RouterLink
+          to="/"
+          :class="`transition-all duration-300 p-4 ${
+            route.path == '/'
+              ? 'font-bold text-[var(--primary-color)]'
+              : 'hover:text-[var(--primary-color)] hover:font-medium'
+          }`"
+          >Home</RouterLink
         >
-        <a
-          href="/about"
-          class="transition-all duration-300 p-4 hover:text-[var(--primary-color)] hover:font-medium"
-          >About</a
+        <RouterLink
+          to="/about"
+          :class="`transition-all duration-300 p-4 ${
+            route.path == '/about'
+              ? 'font-bold text-[var(--primary-color)]'
+              : 'hover:text-[var(--primary-color)] hover:font-medium'
+          }`"
+          >About</RouterLink
         >
-        <a
-          href="/pricing"
-          class="transition-all duration-300 p-4 hover:text-[var(--primary-color)] hover:font-medium"
-          >Pricing</a
+        <RouterLink
+          to="/pricing"
+          :class="`transition-all duration-300 p-4 ${
+            route.path == '/pricing'
+              ? 'font-bold text-[var(--primary-color)]'
+              : 'hover:text-[var(--primary-color)] hover:font-medium'
+          }`"
+          >Pricing</RouterLink
         >
       </div>
 
       <!-- here is login and signup buttons -->
       <NavButtonsGroup />
 
-      <!-- menu bar for mobile and tablet TODO:Add Mobile And tab popup -->
+      <!-- menu bar for mobile and tablet TODO✅:Add Mobile And tab popup -->
       <div class="cursor-pointer p-2 md:p-4 lg:hidden">
+        <div
+          :class="[
+            `fixed transition-all duration-400 flex flex-col w-full pb-10 h-full pl-5 md:px-10 pt-5 gap-10 bg-white/40 overflow-y-auto lg:hidden left-0 z-40 ${
+              isNavMenuOpen ? ' top-20' : '-top-[1000px]'
+            }`,
+          ]"
+        >
+          <div
+            className="absolute inset-0 bg-white/40 backdrop-blur-sm -z-10"
+          />
+
+          <div
+            class="lg:hidden flex flex-col justify-center items-start text-[1rem] *:border-b *:border-gray-300 *:w-full"
+          >
+            <RouterLink
+              to="/"
+              :class="`transition-all duration-300 p-4 ${
+                route.path == '/'
+                  ? 'font-bold text-[var(--primary-color)]'
+                  : 'hover:text-[var(--primary-color)] hover:font-medium'
+              }`"
+              @click="isNavMenuOpen = false"
+              >Home</RouterLink
+            >
+            <RouterLink
+              to="/about"
+              :class="`transition-all duration-300 p-4 ${
+                route.path == '/about'
+                  ? 'font-bold text-[var(--primary-color)]'
+                  : 'hover:text-[var(--primary-color)] hover:font-medium'
+              }`"
+              @click="isNavMenuOpen = false"
+              >About</RouterLink
+            >
+            <RouterLink
+              to="/pricing"
+              :class="`transition-all duration-300 p-4 ${
+                route.path == '/pricing'
+                  ? 'font-bold text-[var(--primary-color)]'
+                  : 'hover:text-[var(--primary-color)] hover:font-medium'
+              }`"
+              @click="isNavMenuOpen = false"
+              >Pricing</RouterLink
+            >
+          </div>
+          <div class="">
+            <NavButtonsGroup :is-large-screen="false" />
+          </div>
+        </div>
         <svg
           width="24"
           height="25"

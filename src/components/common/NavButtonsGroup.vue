@@ -1,12 +1,23 @@
 <script setup>
   import LargeButton from "./LargeButton.vue";
+
+  defineProps({
+    isLargeScreen: {
+      type: Boolean,
+      default: true,
+    },
+  });
 </script>
 
 <template>
-  <div class="hidden lg:flex justify-center items-center gap-5">
+  <div
+    :class="`justify-center items-center gap-5 ${
+      isLargeScreen ? 'hidden lg:flex' : 'lg:hidden flex'
+    }`"
+  >
     <LargeButton
       title="Login"
-      -custom-class="hover:font-medium hover:bg-[var(--primary-color)] hover:text-white md:px-12 text-[var(--primary-color)] outline-[var(--primary-color)]"
+      -custom-class="hover:font-medium hover:bg-[var(--primary-color)] hover:text-white md:px-12 text-[var(--primary-color)] outline-[var(--primary-color)] bg-white"
     />
     <LargeButton
       title="Signup"
