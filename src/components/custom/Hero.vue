@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <section>
+  <section class="py-10">
     <div class="baseContainer grid gap-20 overflow-hidden">
       <div class="grid gap-6 place-items-center">
         <h1

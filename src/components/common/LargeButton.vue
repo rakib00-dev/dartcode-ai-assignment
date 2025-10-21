@@ -20,7 +20,7 @@
   <a
     :href="href"
     :class="[
-      'transition-all duration-300 text-sm md:text-md outline-[1.5px] outline-[var(--primary-color)] rounded py-2 capitalize cursor-pointer w-fit',
+      'transition-all duration-300 text-sm md:text-md lg:text-lg outline-[1.5px] outline-[var(--primary-color)] rounded py-2 capitalize cursor-pointer w-fit',
       CustomClass,
       paddingX,
     ]"

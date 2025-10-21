@@ -17,11 +17,11 @@
   >
     <LargeButton
       title="Login"
-      -custom-class="hover:font-medium hover:bg-[var(--primary-color)] hover:text-white md:px-12 text-[var(--primary-color)] outline-[var(--primary-color)] bg-white"
+      -custom-class="hover:font-medium hover:bg-[var(--primary-color)] hover:text-white md:px-14 text-[var(--primary-color)] outline-[var(--primary-color)] bg-white"
     />
     <LargeButton
       title="Signup"
-      -custom-class="bg-[var(--primary-color)] text-white hover:bg-[var(--primary-dark-color)] hover:font-medium md:px-12"
+      -custom-class="bg-[var(--primary-color)] text-white hover:bg-[var(--primary-dark-color)] hover:font-medium md:px-14"
     />
   </div>
 </template>

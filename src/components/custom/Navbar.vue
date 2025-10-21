@@ -51,7 +51,9 @@
       </RouterLink>
 
       <!-- navigation list for pages TODO:Add routing -->
-      <div class="hidden lg:flex justify-center items-center text-[1rem]">
+      <div
+        class="hidden lg:flex justify-center items-center text-[1rem] lg:text-lg"
+      >
         <RouterLink
           to="/"
           :class="`transition-all duration-300 p-4 ${
