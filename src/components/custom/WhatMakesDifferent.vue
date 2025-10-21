@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="py-20">
+  <section class="py-10">
     <div class="baseContainer grid gap-16">
       <div class="grid place-items-center gap-4">
         <h1 class="mainSectionHeader">What Makes DartCode AI Different?</h1>

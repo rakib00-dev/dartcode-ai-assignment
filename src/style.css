@@ -27,7 +27,7 @@ body {
 }
 
 .baseContainer {
-  @apply max-w-7xl mx-auto w-full px-8 md:px-16 lg:px-24 py-3 relative;
+  @apply max-w-[85rem] mx-auto w-full px-8 md:px-16 lg:px-24 py-3 relative;
 }
 
 p,
