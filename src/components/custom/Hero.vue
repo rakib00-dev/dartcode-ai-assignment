@@ -17,7 +17,7 @@
           >
         </h1>
         <div
-          class="relative grid gap-18 md:gap-8 place-items-center md:px-[20%]"
+          class="relative grid gap-12 md:gap-8 place-items-center md:px-[20%]"
         >
           <div class="grid place-items-center">
             <HeroBgLineEelement class="w-full absolute -z-10 max-md:hidden" />
