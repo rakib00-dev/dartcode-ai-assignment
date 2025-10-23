@@ -111,9 +111,7 @@
         </div>
       </div>
       <div class="flex max-sm:flex-col justify-center gap-16 w-full">
-        <div
-          class="flex flex-row md:flex-col justify-start items-center gap-15 md:gap-10"
-        >
+        <div class="flex flex-row justify-start items-start gap-15 md:gap-10">
           <div class="flex flex-col gap-4">
             <h5 class="text-gray-400 font-bold text-md">Company</h5>
             <div class="grid gap-2">
