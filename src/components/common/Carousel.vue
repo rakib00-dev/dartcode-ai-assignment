@@ -91,5 +91,6 @@
   .carousel__wrapper {
     resize: horizontal;
     padding: 2px;
+    width: 100%;
   }
 </style>
