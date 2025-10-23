@@ -1,6 +1,8 @@
 <template>
-  <section class="bg-[var(--footer-color)] mt-20 py-20 overflow-hidden">
-    <div class="baseContainer flex-col flex lg:flex-row gap-8">
+  <section
+    class="bg-[var(--footer-color)] mt-4 md:mt-20 py-14 md:py-20 overflow-hidden"
+  >
+    <div class="baseContainer flex-col flex lg:flex-row gap-4 md:gap-8">
       <div class="grid gap-3 lg:w-2/5">
         <div>
           <!-- short logo -->
@@ -108,8 +110,10 @@
           </a>
         </div>
       </div>
-      <div class="flex max-sm:flex-col justify-center gap-10 lg:gap-16 w-full">
-        <div class="flex max-md:flex-col justify-between gap-10">
+      <div class="flex max-sm:flex-col justify-center gap-16 w-full">
+        <div
+          class="flex flex-row md:flex-col justify-start items-center gap-15 md:gap-10"
+        >
           <div class="flex flex-col gap-4">
             <h5 class="text-gray-400 font-bold text-md">Company</h5>
             <div class="grid gap-2">
@@ -134,17 +138,17 @@
           <form action="">
             <label
               for="email"
-              class="text-center relative overflow-hidden rounded flex"
+              class="text-center relative overflow-hidden rounded flex max-md:w-[85%]"
             >
               <input
                 type="email"
                 id="email"
-                class="bg-white left-0 py-3 pl-4 pr-16 rounded"
+                class="bg-white left-0 py-[10px] pl-4 pr-16 rounded"
                 placeholder="Enter email address"
               />
               <button
                 type="submit"
-                class="bg-[var(--primary-color)] text-center absolute right-0 py-3 px-6 rounded-r text-white cursor-pointer"
+                class="bg-[var(--primary-color)] text-center absolute right-0 py-[10px] px-6 rounded-r text-white cursor-pointer w-[35%]"
               >
                 Join
               </button>

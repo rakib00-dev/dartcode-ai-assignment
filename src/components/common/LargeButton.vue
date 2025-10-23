@@ -9,6 +9,14 @@
       type: String,
       default: "px-8",
     },
+    paddingY: {
+      type: String,
+      default: "py-2",
+    },
+    rounded: {
+      type: String,
+      default: "rounded",
+    },
     href: {
       default: "#",
       type: String,
@@ -20,9 +28,11 @@
   <a
     :href="href"
     :class="[
-      'transition-all duration-300 text-sm md:text-md lg:text-lg outline-[1.5px] outline-[var(--primary-color)] rounded py-2 capitalize cursor-pointer w-fit',
+      'transition-all duration-300 text-sm md:text-md lg:text-lg outline-[1.5px] outline-[var(--primary-color)] capitalize cursor-pointer w-fit',
       CustomClass,
       paddingX,
+      paddingY,
+      rounded,
     ]"
   >
     {{ title }}
