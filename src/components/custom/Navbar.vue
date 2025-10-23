@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <main class="bg-white/90 sticky top-0 z-50 py-3">
+  <main class="bg-white/90 sticky -top-2 z-50 md:py-3">
     <div class="baseContainer flex justify-between items-center gap-4">
       <div className="absolute inset-0 bg-white/40 backdrop-blur-sm -z-10" />
 
@@ -24,7 +24,7 @@
           viewBox="0 0 176 51"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="max-md:w-35"
+          class="max-sm:w-16 max-md:h-5 max-md:w-25"
         >
           <path
             d="M0 35.1526V6.76553H17.0067C26.9768 8.54768 30.9237 16.4419 31.8324 18.2595L31.8395 18.2738C32.7346 20.064 35.4199 21.0616 35.4199 21.0616C35.4199 21.0616 35.5257 21.3276 40.9183 21.982C40.9183 21.982 54.856 21.982 54.856 33.746C54.856 45.51 40.9183 45.3821 40.9183 45.3821C40.9183 45.3821 35.7891 45.6017 32.7346 44.6149C30.949 44.0381 30.0469 43.3161 28.387 42.569L32.7346 37.71C35.4774 38.6437 37.2271 38.941 40.9183 38.8608C40.9183 38.8608 47.9511 38.4772 47.9511 33.746C47.9511 29.0148 40.9183 28.1197 40.9183 28.1197L33.6297 27.0968C30.1971 26.1105 28.6114 25.276 26.7247 22.8771C24.1098 16.7048 22.0972 14.4416 17.0067 13.6705H6.90496V30.6771L0 35.1526Z"
@@ -87,10 +87,10 @@
       <NavButtonsGroup />
 
       <!-- menu bar for mobile and tablet TODO✅:Add Mobile And tab popup -->
-      <div class="cursor-pointer p-2 md:p-4 lg:hidden">
+      <div class="cursor-pointer lg:hidden">
         <div
           :class="[
-            `fixed transition-all duration-400 flex flex-col w-full pb-10 h-full pl-5 md:px-10 pt-5 gap-10 bg-white/40 overflow-y-auto lg:hidden left-0 z-40 ${
+            `fixed transition-all duration-400 flex flex-col w-full pb-10 h-full pl-5 md:px-10 pt-5 gap-10 bg-white/40 overflow-y-auto lg:hidden left-0 z-40 p-2 md:p-4 ${
               isNavMenuOpen ? ' top-20' : '-top-[1000px]'
             }`,
           ]"
@@ -137,41 +137,43 @@
             <NavButtonsGroup :is-large-screen="false" />
           </div>
         </div>
-        <svg
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          v-if="!isNavMenuOpen"
-          @click="isNavMenuOpen = true"
-          class="size-8 md:size-10"
-        >
-          <path
-            d="M7 5.5L17 5.5"
-            stroke="#42489E"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M4 12.5L20 12.5"
-            stroke="#42489E"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M7 19.5L17 19.5"
-            stroke="#42489E"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <div class="flex justify-end w-full py-2 pl-2 md:p-4">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            v-if="!isNavMenuOpen"
+            @click="isNavMenuOpen = true"
+            class="transition-all duration-300 size-5 sm:size-8 md:size-10"
+          >
+            <path
+              d="M7 5.5L17 5.5"
+              stroke="#42489E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M4 12.5L20 12.5"
+              stroke="#42489E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M7 19.5L17 19.5"
+              stroke="#42489E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
 
-        <X
-          v-else
-          @click="isNavMenuOpen = false"
-          class="size-8 md:size-10 text-[var(--primary-color)]"
-        />
+          <X
+            v-else
+            @click="isNavMenuOpen = false"
+            class="transition-all duration-300 size-5 sm:size-8 md:size-10 text-[var(--primary-color)]"
+          />
+        </div>
       </div>
     </div>
   </main>

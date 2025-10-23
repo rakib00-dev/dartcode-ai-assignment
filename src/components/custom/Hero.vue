@@ -5,9 +5,9 @@
 </script>
 
 <template>
-  <section class="md:py-10">
+  <section class="py-4 md:py-10">
     <div class="baseContainer grid gap-17 md:gap-20 overflow-hidden">
-      <div class="grid gap-6 place-items-center">
+      <div class="grid gap-8 place-items-center">
         <h1
           class="text-3xl md:text-5xl lg:text-6xl text-center grid font-[400] leading-[54px] md: lg:leading-[84px]"
         >
@@ -17,7 +17,7 @@
           >
         </h1>
         <div
-          class="relative grid gap-12 md:gap-8 place-items-center md:px-[20%]"
+          class="relative grid gap-18 md:gap-8 place-items-center md:px-[20%]"
         >
           <div class="grid place-items-center">
             <HeroBgLineEelement class="w-full absolute -z-10 max-md:hidden" />

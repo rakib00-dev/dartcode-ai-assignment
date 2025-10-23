@@ -1,18 +1,23 @@
 <template>
-  <section class="py-20">
-    <div class="baseContainer grid gap-16">
-      <div class="grid place-items-center gap-4">
-        <h1 class="mainSectionHeader">Explore DartCode AI Features</h1>
+  <section class="md:py-20">
+    <div class="baseContainer grid gap-15 md:gap-16 max-md:!py-0">
+      <div class="grid place-items-center gap-2 md:gap-4">
+        <h1 class="mainSectionHeader max-md:hidden">
+          Explore DartCode AI Features
+        </h1>
+        <h1 class="mainSectionHeader md:hidden">How DartCode AI Works</h1>
         <p
-          class="text-center text-[1rem] lg:text-md font-[400] md:w-1/2 text-[var(--gray-color)] opacity-70"
+          class="text-center text-[1rem] lg:text-md font-[400] md:w-1/2 text-[var(--gray-color)] opacity-70 grid"
         >
-          DartCode AI helps your team move faster, fix less, and ship better
-          code. Skip the manual QA process. Focus on building.
+          <span
+            >DartCode AI helps your team move faster, fix less, and ship better
+            code. </span
+          >Skip the manual QA process. Focus on building.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="grid gap-[21px]">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10">
+        <div class="grid gap-[18px]">
           <div>
             <svg
               width="70"
@@ -114,7 +119,7 @@
             </p>
           </div>
         </div>
-        <div class="grid gap-[21px]">
+        <div class="grid gap-[18px]">
           <div>
             <svg
               width="70"
@@ -172,7 +177,7 @@
             </p>
           </div>
         </div>
-        <div class="grid gap-[21px]">
+        <div class="grid gap-[18px]">
           <div>
             <svg
               width="70"
@@ -236,7 +241,7 @@
             </p>
           </div>
         </div>
-        <div class="grid gap-[21px]">
+        <div class="grid gap-[18px]">
           <div>
             <svg
               width="70"
@@ -300,7 +305,7 @@
             </p>
           </div>
         </div>
-        <div class="grid gap-[21px]">
+        <div class="grid gap-[18px]">
           <div>
             <svg
               width="70"
@@ -363,7 +368,7 @@
             </p>
           </div>
         </div>
-        <div class="grid gap-[21px]">
+        <div class="grid gap-[18px]">
           <div>
             <svg
               width="70"
