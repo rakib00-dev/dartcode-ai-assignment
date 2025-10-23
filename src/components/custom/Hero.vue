@@ -6,7 +6,7 @@
 
 <template>
   <section class="md:py-10">
-    <div class="baseContainer grid gap-18 md:gap-20 overflow-hidden">
+    <div class="baseContainer grid gap-17 md:gap-20 overflow-hidden">
       <div class="grid gap-6 place-items-center">
         <h1
           class="text-3xl md:text-5xl lg:text-6xl text-center grid font-[400] leading-[54px] md: lg:leading-[84px]"
@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-      <div class="grid place-items-center gap-2 md:gap-16">
+      <div class="grid place-items-center gap-3 md:gap-16">
         <span>Trusted by teams building fast, shipping smart</span>
         <div class="flex flex-wrap justify-center items-center gap-3 w-full">
           <div

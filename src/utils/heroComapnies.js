@@ -29,7 +29,7 @@ export const companies = [
       />
     </svg>`,
   `<svg
-      class="max-md:size-10"
+      class=" sm-size-8 max-sm:size-10"
       width="121"
       height="60"
       viewBox="0 0 121 60"
@@ -42,7 +42,7 @@ export const companies = [
       />
     </svg>`,
   `<svg
-      class="max-md:size-10"
+      class=" sm-size-8 max-sm:size-10"
       width="121"
       height="60"
       viewBox="0 0 121 60"
@@ -69,7 +69,7 @@ export const companies = [
       />
     </svg>`,
   `<svg
-      class="max-md:size-10"
+      class=" sm-size-8 max-sm:size-10"
         width="121"
         height="60"
         viewBox="0 0 121 60"
@@ -88,7 +88,7 @@ export const companies = [
         />
       </svg>`,
   `<svg
-      class="max-md:size-10"
+      class=" sm-size-8 max-sm:size-10"
             width="121"
             height="60"
             viewBox="0 0 121 60"
