@@ -40,5 +40,6 @@ h5 {
 }
 
 .mainSectionHeader {
-  @apply text-center text-2xl lg:text-[2.625rem] font-semibold text-[var(--primary-color)] leading-[120%];
+  @apply text-center text-[28px] lg:text-[2.625rem] font-semibold text-[var(--primary-color)] leading-[100%] md:leading-[120%] max-md:px-4;
+  /* @apply text-center text-2xl lg:text-[2.625rem] font-semibold text-[var(--primary-color)] leading-[120%]; */
 }

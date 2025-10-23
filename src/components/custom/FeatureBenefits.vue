@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[var(--primary-light-color)] py-25 my-20 md:my-10">
+  <section class="bg-[var(--primary-light-color)] py-25 mt-20 md:my-10">
     <div class="baseContainer grid gap-[50px] max-sm:!px-12 max-md:!px-12">
       <h1
         class="text-center text-[28px] lg:text-[2.625rem] font-semibold text-[var(--primary-color)] leading-[100%] md:leading-[120%] max-md:px-4"

@@ -4,9 +4,9 @@
 </script>
 
 <template>
-  <section class="py-24">
-    <div class="baseContainer grid gap-[50px]">
-      <h1 class="mainSectionHeader">Choose A Plan That Works For You</h1>
+  <section class="py-32 md:py-24">
+    <div class="baseContainer grid gap-[10px] md:gap-[50px]">
+      <h1 class="mainSectionHeader !px-10">Choose A Plan That Works For You</h1>
 
       <div class="hidden lg:flex justify-center items-center gap-8">
         <PlanCard />
